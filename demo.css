@@ -34,4 +34,8 @@ body {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
+.side-menu {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px; }
+
 /*# sourceMappingURL=demo.css.map */
