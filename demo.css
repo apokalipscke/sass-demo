@@ -30,4 +30,8 @@ body {
         .no-svg .container.resp-image {
           background-image: url("../images/responsive-image@2x.png"); } }
 
+.tab {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
+
 /*# sourceMappingURL=demo.css.map */

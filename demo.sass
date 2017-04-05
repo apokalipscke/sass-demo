@@ -2,6 +2,9 @@
 @import colors
 @import fonts
 
+//------------------------------------------------------------------------- vars
+$border-radius: 5px
+
 
 body
   font-family: $font-stack
@@ -26,3 +29,9 @@ body
 
   &.resp-image
     +responsive-background-image('responsive-image')
+
+.tab
+  +border-top-radius($border-radius)
+
+.side-menu
+  +border-left-radius($border-radius)
