@@ -1,0 +1,33 @@
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem; }
+  @media only screen and (max-width: 992px) {
+    body {
+      font-size: 16px;
+      font-size: 1rem; } }
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+      font-size: 0.875rem; } }
+
+.container {
+  color: #eee; }
+  .container.bg-white {
+    color: #111; }
+    .container.bg-white a {
+      color: #111; }
+  .container.bg-image {
+    background-image: url("../images/image.svg");
+    background-size: contain;
+    filter: alpha(opacity=80);
+    opacity: 0.8; }
+  .container.resp-image {
+    background-image: url("../images/responsive-image.svg"); }
+    .no-svg .container.resp-image {
+      background-image: url("../images/responsive-image.png"); }
+      @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        .no-svg .container.resp-image {
+          background-image: url("../images/responsive-image@2x.png"); } }
+
+/*# sourceMappingURL=demo.css.map */

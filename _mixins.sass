@@ -1,0 +1,60 @@
+//-------------------------------------------------------------------- font-size
+@function calculate-rem($size)
+  $remsize: $size / 16px
+  @return $remsize * 1rem
+
+=font-size($size)
+  font-size: $size
+  font-size: calculate-rem($size)
+
+//------------------------------------------------------------------- responsive
+=bp-large
+  @media only screen and (min-width: 1201px)
+    @content
+
+=bp-desktop
+  @media only screen and (max-width: 1200px)
+    @content
+
+=bp-tablet
+  @media only screen and (max-width: 992px)
+    @content
+
+=bp-phone
+  @media only screen and (max-width: 768px)
+    @content
+
+//-------------------------------------------------- responsive-background-image
+$image-path: '../images' !default
+$fallback-extension: 'png' !default
+$retina-suffix: '@2x'
+=responsive-background-image($name, $size: false)
+  background-image: url('#{$image-path}/#{$name}.svg')
+  @if $size
+    background-size: $size
+
+  .no-svg &
+    background-image: url('#{$image-path}/#{$name}.#{$fallback-extension}')
+
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+      background-image: url('#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension}')
+
+//------------------------------------------------------------- background-image
+=background-image($name, $size: false)
+  background-image: url('#{$image-path}/#{$name}.svg')
+  @if $size
+    background-size: $size
+
+//------------------------------------------------------------------- transition
+=transition($args)
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  -webkit-transition: $args
+  transition: $args
+
+//---------------------------------------------------------------------- opacity
+=opacity($opacity)
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity=$opacity-ie)
+  opacity: $opacity

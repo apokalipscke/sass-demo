@@ -1,0 +1,28 @@
+@import mixins
+@import colors
+@import fonts
+
+
+body
+  font-family: $font-stack
+  +font-size($font-size-default)
+  +bp-tablet
+    +font-size($font-size-tablet)
+
+  +bp-phone
+    +font-size($font-size-phone)
+
+
+.container
+  color: $white
+  &.bg-white
+    color: $black
+    a
+      color: $black
+
+  &.bg-image
+    +background-image('image', contain)
+    +opacity(.8)
+
+  &.resp-image
+    +responsive-background-image('responsive-image')
